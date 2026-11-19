@@ -21,7 +21,7 @@ The tests in `internal/ui` compare the screen with the files in `internal/ui/tes
 
 - Run `make golden` only when the view had to change.
 - Read the diff of each golden file before you commit it. A golden diff that you did not expect is a bug.
-- The README shows a copy of `notes_80x24.golden`. Update that copy when the golden changes.
+- The README shows `docs/assets/screenshot.svg`. Run `make screenshot` after a view change, and commit the new file.
 
 ## Fixtures: fake data only
 
