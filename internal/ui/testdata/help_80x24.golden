@@ -1,0 +1,24 @@
+  ◈ SSHWAVE                                     6 hosts · 3 rules  ⚠ 1 problem  
+────────────────────────────────────────────────────────────────────────────────
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+              ╭─ Keys ───────────────────────────────────────────╮              
+              │  j/k ↑↓ g/G  move / top / bottom                 │              
+              │  /           search (fuzzy)                      │              
+              │  enter / e   edit ~/.ssh/config in $EDITOR       │              
+              │  m           move host to group                  │              
+              │  n / c       edit note / connect with ssh        │              
+              │  space       fold / unfold a group               │              
+              │  x           allow ssh -G for this load          │              
+              │  esc         clear search / close                │              
+              │  ? / q       this help / quit                    │              
+              │                                                  │              
+              │ A backup is saved before every edit.             │              
+              ╰──────────────────────────────────────────────────╯              
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+  ↵  edit   c  connect   m  group   n  note   /  search   x  resolve   ?  help …

@@ -1,0 +1,32 @@
+# SSH config with notes (fixture)
+Include config.d/*
+
+# sshwave: group=Work
+# sshwave: note=Primary API box. Ask team before a restart.
+# sshwave: note=
+# sshwave: note=Deploys run at 02:00 UTC.
+Host production-api prod
+    HostName 192.168.1.50
+    User ubuntu
+
+# sshwave: note=Rebuilt each night
+# sshwave: group=Work
+Host staging-api
+    HostName 10.0.0.20
+    User deploy
+
+# sshwave: note=Under the desk. The fan is loud.
+Host raspberry-pi
+    HostName 192.168.1.77
+    User pi
+
+# A plain comment is not a note.
+Host scratch
+    HostName 10.0.0.99
+
+# sshwave: note=A note for a rule does not count.
+Host *.internal
+    User admin
+
+Host *
+    ServerAliveInterval 60

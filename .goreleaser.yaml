@@ -1,0 +1,77 @@
+# GoReleaser configuration. See https://goreleaser.com
+# Check it with `goreleaser check`. Try it with `goreleaser release --snapshot --clean`.
+# The archive names and the checksum file match `make dist`.
+version: 2
+
+project_name: sshwave
+
+before:
+  hooks:
+    - go mod verify
+
+builds:
+  - id: sshwave
+    main: ./cmd/sshwave
+    binary: sshwave
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w -X main.version=v{{ .Version }}
+
+archives:
+  - id: sshwave
+    formats:
+      - tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+    wrap_in_directory: true
+    files:
+      - LICENSE
+      - README.md
+
+checksum:
+  name_template: SHA256SUMS
+  algorithm: sha256
+
+snapshot:
+  version_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  use: git
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^chore:"
+      - "^ci:"
+      - "^Merge "
+
+release:
+  draft: false
+  prerelease: auto
+
+# Homebrew is not enabled. To publish a formula, create a tap repository,
+# add a token with write access to it as the secret HOMEBREW_TAP_TOKEN, pass
+# that secret to GoReleaser in .github/workflows/release.yml, and remove the
+# comment marks below. Check the key names against the GoReleaser version in
+# use: newer versions prefer `homebrew_casks`.
+#
+# brews:
+#   - name: sshwave
+#     repository:
+#       owner: dansku
+#       name: homebrew-tap
+#       token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
+#     homepage: https://github.com/dansku/sshwave
+#     description: Browse and safely edit your OpenSSH config in the terminal
+#     license: MIT
+#     test: |
+#       system "#{bin}/sshwave", "-version"

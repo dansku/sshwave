@@ -1,0 +1,32 @@
+# SSH config with groups (fixture)
+Include config.d/*
+
+# sshwave: group=Work
+Host production-api prod
+    HostName 192.168.1.50
+    User ubuntu
+
+# sshwave: group=Work
+Host staging-api
+    HostName 10.0.0.20
+    User deploy
+
+# sshwave: group=Home
+Host raspberry-pi
+    HostName 192.168.1.77
+    User pi
+
+Host scratch
+    HostName 10.0.0.99
+
+# sshwave: group=Work
+
+Host not-directly-above
+    HostName 10.0.0.98
+
+# sshwave: group=Work
+Host *.internal
+    User admin
+
+Host *
+    ServerAliveInterval 60

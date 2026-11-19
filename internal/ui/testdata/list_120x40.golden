@@ -1,0 +1,40 @@
+  ◈ SSHWAVE                                                                             6 hosts · 3 rules  ⚠ 1 problem  
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+╭─ Hosts ──────────────────────────────╮ ╭─ Details ───────────────────────────────────────────────────────────────────╮
+│ / Search hosts…                      │ │ github   INCLUDED                                                           │
+│ ──────────────────────────────────── │ │ ../../testdata/ssh/config.d/git.conf:1                                      │
+│ HOSTS · 6                            │ │                                                                             │
+│ ▌ github                         inc │ │ CONFIGURATION ───────────────────────────────────────────────────────────── │
+│   home-server                    inc │ │ Host github                                                                 │
+│   raspberry-pi                   inc │ │     HostName github.com                                                     │
+│   production-api        192.168.1.50 │ │     User git                                                                │
+│   prod                  192.168.1.50 │ │     IdentityFile ~/.ssh/id_github                                           │
+│   staging-api              10.0.0.20 │ │                                                                             │
+│                                      │ │ EFFECTIVE ───────────────────────────────────────────────────────────────── │
+│ RULES · 3                            │ │ This config has Match exec.                                                 │
+│   ✱ *.internal                       │ │ ssh -G will run those local commands.                                       │
+│   ◇ host db* exec true               │ │  x  allow and resolve                                                       │
+│   ✱ *                                │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+│                                      │ │                                                                             │
+╰──────────────────────────────────────╯ ╰─────────────────────────────────────────────────────────────────────────────╯
+  ↵  edit   c  connect   m  group   n  note   /  search   x  resolve   j/k  move   ?  help   q  quit                    

@@ -1,0 +1,24 @@
+  ◈ SSHWAVE                                                  6 hosts · 2 rules  
+────────────────────────────────────────────────────────────────────────────────
+╭─ Hosts ────────────────────────╮ ╭─ Details ─────────────────────────────────╮
+│ / Search hosts…                │ │ production-api                            │
+│ ────────────────────────────── │ │ ~/.ssh/config:8                           │
+│ HOSTS · 6                      │ │ group: Work                               │
+│   ▾ Work · 3                   │ │ ✎ Primary API box. Ask team before a res… │
+│ ▌ production-a… ✎ 192.168.1.50 │ │                                           │
+│   prod ✎          192.168.1.50 │ │   Deploys run at 02:00 UTC.               │
+│   staging-api ✎      10.0.0.20 │ │                                           │
+│   ▾ Ungrouped · 3              │ │ CONFIGURATION ─────────────────────────── │
+│   github ✎                 inc │ │ Host production-api prod                  │
+│   raspberry-pi ✎  192.168.1.77 │ │     HostName 192.168.1.50                 │
+│   scratch            10.0.0.99 │ │     User ubuntu                           │
+│                                │ │                                           │
+│ RULES · 2                      │ │ EFFECTIVE ─────────────────────────────── │
+│   ✱ *.internal                 │ │ Settings are not resolved yet.            │
+│   ✱ *                          │ │ ssh -G may run local commands.            │
+│                                │ │  x  allow and resolve                     │
+│                                │ │                                           │
+│                                │ │                                           │
+│                                │ │                                           │
+╰────────────────────────────────╯ ╰───────────────────────────────────────────╯
+  ↵  edit   c  connect   m  group   n  note   /  search   x  resolve   ?  help …

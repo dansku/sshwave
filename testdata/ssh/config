@@ -1,0 +1,25 @@
+# Personal SSH config (fixture)
+Include config.d/*
+Include missing.conf
+
+Host production-api prod
+    HostName 192.168.1.50
+    User ubuntu
+    Port 22
+    IdentityFile ~/.ssh/id_ed25519
+    CustomUnknownDirective  keep-me   # trailing comment
+
+Host staging-api
+  HostName=10.0.0.20
+  User deploy
+  ProxyJump production-api
+
+Host *.internal
+    User admin
+    ForwardAgent no
+
+Match host db* exec "true"
+    User dbadmin
+
+Host *
+    ServerAliveInterval 60

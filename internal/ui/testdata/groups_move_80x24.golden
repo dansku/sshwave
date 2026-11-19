@@ -1,0 +1,24 @@
+  ◈ SSHWAVE                                                  7 hosts · 2 rules  
+────────────────────────────────────────────────────────────────────────────────
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                ╭─ Move to group ──────────────────────────────╮                
+                │ scratch                                      │                
+                │                                              │                
+                │   Git                                        │                
+                │   Work                                       │                
+                │   Home                                       │                
+                │ ▌ Ungrouped  (current)                       │                
+                │   New group…                                 │                
+                │                                              │                
+                │  ↵  move     esc  cancel                     │                
+                ╰──────────────────────────────────────────────╯                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+  ↵  edit   c  connect   m  group   n  note   /  search   x  resolve   ?  help …

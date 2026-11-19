@@ -1,0 +1,19 @@
+# Build output
+/sshwave
+/dist/
+
+# Test and coverage output
+*.test
+*.out
+coverage.*
+
+# Demo recording output (see docs/assets/demo.tape)
+/docs/assets/*.mp4
+/docs/assets/*.webm
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~

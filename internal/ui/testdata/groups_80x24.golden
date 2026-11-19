@@ -1,0 +1,24 @@
+  ◈ SSHWAVE                                                  7 hosts · 2 rules  
+────────────────────────────────────────────────────────────────────────────────
+╭─ Hosts ────────────────────────╮ ╭─ Details ─────────────────────────────────╮
+│ / Search hosts…                │ │ production-api                            │
+│ ────────────────────────────── │ │ ../../testdata/ssh-groups/config:5        │
+│ HOSTS · 7                      │ │ group: Work                               │
+│   ▾ Git · 1                    │ │                                           │
+│   github                   inc │ │ CONFIGURATION ─────────────────────────── │
+│   ▾ Work · 3                   │ │ Host production-api prod                  │
+│ ▌ production-api  192.168.1.50 │ │     HostName 192.168.1.50                 │
+│   prod            192.168.1.50 │ │     User ubuntu                           │
+│   staging-api        10.0.0.20 │ │                                           │
+│   ▾ Home · 1                   │ │ EFFECTIVE ─────────────────────────────── │
+│   raspberry-pi    192.168.1.77 │ │ This config was not fully read.           │
+│   ▾ Ungrouped · 2              │ │ ssh -G may run local commands.            │
+│   scratch            10.0.0.99 │ │  x  allow and resolve                     │
+│   not-directly-above 10.0.0.98 │ │                                           │
+│                                │ │                                           │
+│ RULES · 2                      │ │                                           │
+│   ✱ *.internal                 │ │                                           │
+│   ✱ *                          │ │                                           │
+│                                │ │                                           │
+╰────────────────────────────────╯ ╰───────────────────────────────────────────╯
+  ↵  edit   c  connect   m  group   n  note   /  search   x  resolve   ?  help …
