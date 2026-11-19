@@ -19,7 +19,7 @@ A synthwave Bubble Tea v2 terminal app for macOS and Linux. It browses the hosts
 - `make check` — format, vet, test, verify modules. Run it before you finish.
 - `go test -race -count=1 ./...` — what CI runs.
 - `make golden` — refresh golden views. Run it only for an intended view change, and review each diff.
-- `make build`, `make dist`, `make cover`, `make fmt-check`, `make demo`. `make help` lists all.
+- `make build`, `make dist`, `make cover`, `make fmt-check`, `make screenshot`, `make demo`. `make help` lists all.
 
 ## Rules
 

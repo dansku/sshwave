@@ -4,7 +4,7 @@ VERSION   ?= $(shell git describe --tags --always --dirty 2>/dev/null || echo de
 LDFLAGS   := -s -w -X main.version=$(VERSION)
 PLATFORMS := darwin/amd64 darwin/arm64 linux/amd64 linux/arm64
 
-.PHONY: help build install run test cover golden fmt fmt-check vet lint verify vuln check dist demo clean
+.PHONY: help build install run test cover golden fmt fmt-check vet lint verify vuln check dist screenshot demo clean
 
 help: ## Show this help
 	@grep -E '^[a-z-]+:.*## ' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-10s %s\n", $$1, $$2}'
@@ -59,6 +59,9 @@ dist: ## Cross-compile release archives and SHA256SUMS into dist/
 	done
 	@cd dist && if command -v sha256sum >/dev/null 2>&1; then sha256sum *.tar.gz > SHA256SUMS; else shasum -a 256 *.tar.gz > SHA256SUMS; fi
 	@cat dist/SHA256SUMS
+
+screenshot: ## Redraw docs/assets/screenshot.svg from the fixture
+	go test ./internal/ui -run TestScreenshot -screenshot "$(CURDIR)/docs/assets/screenshot.svg"
 
 demo: ## Record docs/assets/demo.gif with VHS
 	@command -v vhs >/dev/null 2>&1 || { echo "vhs is not installed. See https://github.com/charmbracelet/vhs, then run 'make demo' again."; exit 1; }

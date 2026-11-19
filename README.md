@@ -10,34 +10,9 @@
   <a href="https://github.com/charmbracelet/bubbletea"><img src="https://img.shields.io/badge/built%20with-Bubble%20Tea-ff2e97" alt="Built with Bubble Tea"></a>
 </p>
 
-```text
-  ◈ SSHWAVE                                                  6 hosts · 2 rules  
-────────────────────────────────────────────────────────────────────────────────
-╭─ Hosts ────────────────────────╮ ╭─ Details ─────────────────────────────────╮
-│ / Search hosts…                │ │ production-api                            │
-│ ────────────────────────────── │ │ ~/.ssh/config:8                           │
-│ HOSTS · 6                      │ │ group: Work                               │
-│   ▾ Work · 3                   │ │ ✎ Primary API box. Ask team before a res… │
-│ ▌ production-a… ✎ 192.168.1.50 │ │                                           │
-│   prod ✎          192.168.1.50 │ │   Deploys run at 02:00 UTC.               │
-│   staging-api ✎      10.0.0.20 │ │                                           │
-│   ▾ Ungrouped · 3              │ │ CONFIGURATION ─────────────────────────── │
-│   github ✎                 inc │ │ Host production-api prod                  │
-│   raspberry-pi ✎  192.168.1.77 │ │     HostName 192.168.1.50                 │
-│   scratch            10.0.0.99 │ │     User ubuntu                           │
-│                                │ │                                           │
-│ RULES · 2                      │ │ EFFECTIVE ─────────────────────────────── │
-│   ✱ *.internal                 │ │ Settings are not resolved yet.            │
-│   ✱ *                          │ │ ssh -G may run local commands.            │
-│                                │ │  x  allow and resolve                     │
-│                                │ │                                           │
-│                                │ │                                           │
-│                                │ │                                           │
-╰────────────────────────────────╯ ╰───────────────────────────────────────────╯
-  ↵  edit   c  connect   m  group   n  note   /  search   x  resolve   ?  help …
-```
+<p align="center"><img src="docs/assets/screenshot.svg" alt="The sshwave terminal UI: a host list with Groups and Notes on the left, and the details of one host on the right" width="900"></p>
 
-This is the real 80x24 view of the fixture in `testdata/ssh-notes`, copied from a golden test file. The app has colors; `make demo` records them as a GIF with [VHS](https://github.com/charmbracelet/vhs).
+The picture is the real UI, drawn from the fake data in `testdata/ssh-notes`. `make screenshot` redraws it, and `make demo` records a GIF with [VHS](https://github.com/charmbracelet/vhs).
 
 ## Why
 
@@ -151,16 +126,6 @@ sshwave is a viewer and a careful editor for a file that you already have. It is
 ## Platform support
 
 macOS and Linux, on `amd64` and `arm64`. Windows is not supported: the code uses Unix calls, and a Windows build stops with a build-constraint error.
-
-## Roadmap
-
-Not built yet:
-
-- A form editor for host settings.
-- Add, duplicate, and delete a host.
-- A backup browser and a restore screen.
-- Diagnostics: the header counts config problems, but the app does not list them yet.
-- Rename and delete a Group in one step.
 
 ## Contributing
 

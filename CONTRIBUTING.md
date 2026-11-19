@@ -39,7 +39,7 @@ Files in `testdata/`, tests, golden views, and docs must not contain real host n
 
 ## Propose a feature
 
-Open a feature request before you write code. Describe the problem first, then the smallest change that solves it. The roadmap in the README lists what is not built. A feature that writes to the config must use the existing writer: hash check, backup, temporary file, rename.
+Open a feature request before you write code. Describe the problem first, then the smallest change that solves it. A feature that writes to the config must use the existing writer: hash check, backup, temporary file, rename.
 
 ## Commits and pull requests
 
