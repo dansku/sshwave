@@ -8,8 +8,6 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License: MIT"></a>
 </p>
 
-<p align="center"><img src="docs/assets/screenshot.svg" alt="The sshwave terminal UI: a host list with Groups and Notes on the left, and the details of one host on the right" width="900"></p>
-
 <p align="center"><img src="docs/assets/demo.gif" alt="A recording of sshwave: moving through hosts, searching, folding a Group, and opening the Note, Group, consent, and help dialogs" width="900"></p>
 
 ## What it does
