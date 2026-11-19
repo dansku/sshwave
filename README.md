@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/dansku/sshwave/actions/workflows/ci.yml"><img src="https://github.com/dansku/sshwave/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://github.com/dansku/sshwave/releases/latest"><img src="https://img.shields.io/github/v/release/dansku/sshwave" alt="Latest release"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/dansku/sshwave" alt="License: MIT"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License: MIT"></a>
 </p>
 
 <p align="center"><img src="docs/assets/screenshot.svg" alt="The sshwave terminal UI: a host list with Groups and Notes on the left, and the details of one host on the right" width="900"></p>
